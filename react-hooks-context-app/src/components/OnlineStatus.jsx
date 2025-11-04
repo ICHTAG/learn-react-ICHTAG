@@ -17,17 +17,7 @@ function OnlineStatus() {
   }, []);
 
   return (
-    <div style={{ 
-      position: 'fixed',
-      top: '10px',
-      right: '10px',
-      padding: '5px 10px',
-      backgroundColor: isOnline ? '#4CAF50' : '#f44336',
-      color: 'white',
-      borderRadius: '4px',
-      fontSize: '12px',
-      zIndex: 1000
-    }}>
+    <div className={`online-status ${isOnline ? 'online' : 'offline'}`}>
       {isOnline ? 'Online' : 'Offline'}
     </div>
   );

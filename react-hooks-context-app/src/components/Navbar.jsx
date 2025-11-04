@@ -14,34 +14,41 @@ function Navbar() {
   };
 
   return (
-    <nav style={{ 
-      padding: "1rem", 
-      borderBottom: "1px solid #ccc",
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "center"
-    }}>
-      <div>
-        <Link to="/" style={{ marginRight: "1rem" }}>Home</Link>
-        <Link to="/about" style={{ marginRight: "1rem" }}>About</Link>
-        {user && (
-          <Link to="/dashboard" style={{ marginRight: "1rem" }}>Dashboard</Link>
-        )}
-      </div>
-      
-      <div>
-        <button onClick={toggleTheme} style={{ marginRight: "1rem" }}>
-          {theme === 'light' ? '🌙' : '☀️'}
-        </button>
+    <nav className="navbar">
+      <div className="nav-links">
+        <div className="nav-left">
+          <Link to="/" className="nav-link">Home</Link>
+          <Link to="/about" className="nav-link">About</Link>
+          {user && (
+            <Link to="/dashboard" className="nav-link">Dashboard</Link>
+          )}
+        </div>
         
-        {user ? (
-          <>
-            <span style={{ marginRight: "1rem" }}>Welcome, {user.name}</span>
-            <button onClick={handleLogout}>Logout</button>
-          </>
-        ) : (
-          <Link to="/login">Login</Link>
-        )}
+        <div className="nav-right">
+          <button onClick={toggleTheme} className="theme-toggle">
+            {theme === 'light' ? '🌙' : '☀️'}
+          </button>
+          
+          {user ? (
+            <>
+              <span style={{ marginRight: "1rem", color: "white" }}>
+                Welcome, {user.name}
+              </span>
+              <button onClick={handleLogout} className="nav-button">
+                Logout
+              </button>
+            </>
+          ) : (
+            <div style={{ display: 'flex', gap: '1rem' }}>
+              <Link to="/login" className="nav-link">Log In</Link>
+              <Link to="/signup" className="nav-button" style={{
+                background: 'linear-gradient(45deg, #667eea, #764ba2)'
+              }}>
+                Sign Up
+              </Link>
+            </div>
+          )}
+        </div>
       </div>
     </nav>
   );

@@ -4,27 +4,25 @@ function Counter() {
   const [count, setCount] = useState(0);
 
   return (
-    <div style={{ textAlign: 'center', padding: '2rem' }}>
+    <div className="fade-in">
       <h2>Counter</h2>
-      <p style={{ fontSize: '3rem', fontWeight: 'bold', margin: '1rem 0' }}>
-        {count}
-      </p>
-      <div>
+      <div className="counter-display">{count}</div>
+      <div className="counter-buttons">
         <button 
           onClick={() => setCount(count - 1)}
-          style={{ margin: '0 0.5rem', padding: '0.5rem 1rem' }}
+          className="counter-btn primary"
         >
           -
         </button>
         <button 
           onClick={() => setCount(0)}
-          style={{ margin: '0 0.5rem', padding: '0.5rem 1rem' }}
+          className="counter-btn secondary"
         >
           Reset
         </button>
         <button 
           onClick={() => setCount(count + 1)}
-          style={{ margin: '0 0.5rem', padding: '0.5rem 1rem' }}
+          className="counter-btn primary"
         >
           +
         </button>

@@ -5,21 +5,16 @@ import TodoList from '../components/TodoList';
 
 function Home() {
   return (
-    <div>
+    <div className="page-container fade-in">
       <OnlineStatus />
-      <h1>Home Page</h1>
-      <p>Welcome to the React Hooks & Context App!</p>
+      <h1 className="page-title">Home Page</h1>
+      <p className="page-subtitle">Welcome to the React Hooks & Context App!</p>
       
-      <div style={{ 
-        display: 'grid', 
-        gridTemplateColumns: '1fr 1fr', 
-        gap: '2rem',
-        marginTop: '2rem'
-      }}>
-        <div>
+      <div className="home-grid">
+        <div className="grid-item">
           <Counter />
         </div>
-        <div>
+        <div className="grid-item">
           <TodoList />
         </div>
       </div>

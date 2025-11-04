@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Login from "./pages/Login";
+import SignUp from "./pages/SignUp"; // Make sure this import exists
 import Dashboard from "./pages/dashboard/Dashboard";
 import Profile from "./pages/dashboard/Profile";
 import Tasks from "./pages/dashboard/Tasks";
@@ -23,6 +24,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} /> {/* Make sure this route exists */}
 
             <Route
               path="/dashboard"
@@ -44,4 +46,3 @@ function App() {
 }
 
 export default App;
-
