@@ -1,0 +1,17 @@
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive design for home page grid */
+@media (max-width: 768px) {
+  .home-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
