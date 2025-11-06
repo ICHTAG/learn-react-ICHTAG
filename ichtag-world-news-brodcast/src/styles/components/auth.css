@@ -1,0 +1,51 @@
+/* Additional Auth-specific styles */
+.auth-divider {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  color: #6b7280;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.auth-divider span {
+  padding: 0 16px;
+  font-size: 14px;
+}
+
+.demo-credentials {
+  background-color: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #0369a1;
+}
+
+.demo-credentials strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.password-strength {
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+.password-strength.weak {
+  color: #dc2626;
+}
+
+.password-strength.medium {
+  color: #d97706;
+}
+
+.password-strength.strong {
+  color: #059669;
+}
